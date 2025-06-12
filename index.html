@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MITS - Micro Information Technology Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <!-- Sticky Banner -->
+  <div id="stickyBanner" class="fixed top-4 left-4 z-50 bg-yellow-400 text-black px-4 py-2 rounded shadow-md font-semibold hidden">
+    🎓 <a href="#apply" class="underline">Apply for Internship</a>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-gray-800 text-white p-6 transform -translate-x-full transition-transform duration-300 z-40">
+    <button onclick="toggleSidebar()" class="text-right w-full mb-4">❌ Close</button>
+    <nav class="space-y-4">
+      <a href="#apply" class="block">Internship Application</a>
+      <a href="#">Offer Letter</a>
+      <a href="#">Certificate Verification</a>
+      <a href="#">Join Team</a>
+      <a href="#">Contact Info</a>
+    </nav>
+  </div>
+
+  <!-- Hamburger -->
+  <button onclick="toggleSidebar()" class="m-4 text-2xl fixed top-2 left-2 z-50">☰</button>
+
+  <!-- Main Content -->
+  <header class="text-center py-12 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+    <h1 class="text-4xl font-bold">Micro Information Technology Services (MITS)</h1>
+    <p class="mt-4 text-lg">Empowering students through innovation, mentorship, and industry exposure.</p>
+  </header>
+
+  <main class="p-6">
+    <!-- University Affiliations -->
+    <section>
+      <h2 class="text-2xl font-semibold text-center my-6">University Collaborations</h2>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4 justify-items-center">
+        <!-- Replace with actual image URLs or use logos from public CDNs -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/NIT_Patna_Logo.png" alt="NIT Patna" class="w-24 h-24 object-contain" />
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/34/IIT_Kanpur_Logo.svg" alt="IIT Kanpur" class="w-24 h-24 object-contain" />
+        <img src="https://upload.wikimedia.org/wikipedia/en/e/e2/IIT_Kharagpur_Logo.svg" alt="IIT KGP" class="w-24 h-24 object-contain" />
+        <img src="https://upload.wikimedia.org/wikipedia/en/0/04/IIT_Madras_Logo.svg" alt="IIT Madras" class="w-24 h-24 object-contain" />
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/fc/IIT_Delhi_Logo.svg" alt="IIT Delhi" class="w-24 h-24 object-contain" />
+        <img src="https://upload.wikimedia.org/wikipedia/en/6/62/NIT_Trichy_logo.svg" alt="NIT Trichy" class="w-24 h-24 object-contain" />
+        <img src="https://upload.wikimedia.org/wikipedia/en/2/2e/IIT_Roorkee_Logo.svg" alt="IIT Roorkee" class="w-24 h-24 object-contain" />
+        <img src="https://upload.wikimedia.org/wikipedia/en/4/44/IIT_Bombay_Logo.svg" alt="IIT Bombay" class="w-24 h-24 object-contain" />
+        <img src="https://upload.wikimedia.org/wikipedia/en/1/1e/IIT_Guwahati_Logo.svg" alt="IIT Guwahati" class="w-24 h-24 object-contain" />
+        <img src="https://upload.wikimedia.org/wikipedia/en/6/6b/IIT_Hyderabad_logo.svg" alt="IIT Hyderabad" class="w-24 h-24 object-contain" />
+      </div>
+    </section>
+
+    <!-- Social Media Stats -->
+    <section class="my-12">
+      <h2 class="text-2xl font-semibold text-center mb-4">Our Reach</h2>
+      <div class="flex flex-col md:flex-row justify-around items-center text-center gap-8">
+        <div>
+          <p class="text-4xl font-bold text-blue-600">25K+</p>
+          <p class="text-lg">Followers</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold text-green-600">150+</p>
+          <p class="text-lg">Universities</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold text-purple-600">10K+</p>
+          <p class="text-lg">Interns</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Apply Section -->
+    <section id="apply" class="text-center mt-16 mb-12">
+      <a href="#" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full font-semibold shadow">Apply for Internship</a>
+    </section>
+  </main>
+
+  <footer class="text-center py-6 bg-gray-200 text-gray-600">
+    &copy; 2025 Micro Information Technology Services (MITS)
+  </footer>
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const banner = document.getElementById('stickyBanner');
+
+    function toggleSidebar() {
+      sidebar.classList.toggle('-translate-x-full');
+    }
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        banner.classList.remove('hidden');
+      } else {
+        banner.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
